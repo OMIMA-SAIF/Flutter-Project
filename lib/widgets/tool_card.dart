@@ -38,6 +38,14 @@ class ToolCard extends StatelessWidget {
     );
   }
 
+  else if (tool.title == 'APK Analyzer') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const APKAnalyzerScreen(),
+      ),
+    );
+  }
   },
 
   );
