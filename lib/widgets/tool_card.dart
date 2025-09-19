@@ -10,10 +10,27 @@ class ToolCard extends StatelessWidget {
   const ToolCard({
   super.key,
   required this.tool,
+  )};
   @override
   Widget build(BuildContext context) {
     return Card(
       color: Colors.grey[900],
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
-      ),);}}
+      ),
+  elevation: 5,
+  child: InkWell(
+  onTap: () {
+  if (tool.title == 'Password Generator') {
+  Navigator.push(
+  context,
+  MaterialPageRoute(
+  builder: (context) => const PasswordGeneratorScreen(),
+  ),
+  );
+  }
+  },
+
+  );
+  }
+}
