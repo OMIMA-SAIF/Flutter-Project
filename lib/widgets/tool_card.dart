@@ -55,6 +55,40 @@ class ToolCard extends StatelessWidget {
     );
   }
   },
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Icon(
+              tool.icon,
+              size: 50,
+              color: Colors.greenAccent[400],
+            ),
+            const SizedBox(height: 10),
+            Text(
+              tool.title,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 5),
+            Text(
+              tool.description,
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.white.withOpacity(0.7),
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      ),
+  },
 
   );
   }
