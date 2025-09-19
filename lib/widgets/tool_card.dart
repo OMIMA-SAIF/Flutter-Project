@@ -29,6 +29,15 @@ class ToolCard extends StatelessWidget {
   ),
   );
   }
+  else if (tool.title == 'Port Scanner') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const PortScannerScreen(),
+      ),
+    );
+  }
+
   },
 
   );
