@@ -8,9 +8,9 @@ import 'package:project/screens/APK_Analyzer_screen.dart';
 class ToolCard extends StatelessWidget {
   final Tool tool;
   const ToolCard({
-  super.key,
-  required this.tool,
-  )};
+    super.key,
+    required this.tool,
+  });
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -88,8 +88,9 @@ class ToolCard extends StatelessWidget {
           ],
         ),
       ),
-  },
-
-  );
+  ),
+    );
   }
 }
+
+
