@@ -46,6 +46,14 @@ class ToolCard extends StatelessWidget {
       ),
     );
   }
+  else if (tool.title == 'HTTP Header Analyzer') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const HTTPHeaderAnalyzerScreen(),
+      ),
+    );
+  }
   },
 
   );
