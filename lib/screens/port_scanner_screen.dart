@@ -7,6 +7,12 @@ class PasswordGeneratorScreen extends StatelessWidget {
     return Scaffold(
       title: const Text('Password Generator'),
       backgroundColor: Colors.transparent,
+      body: const Center(
+        child: Text(
+          'This is the Password Generator page.',
+          style: TextStyle(color: Colors.white, fontSize: 18),
+        ),
+      ),
     ),
     );
   }
