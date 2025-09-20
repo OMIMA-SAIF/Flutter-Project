@@ -25,4 +25,8 @@ class HomeScreen extends StatelessWidget {
       icon: Icons.code,
     ),
   ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
+  }
 }
