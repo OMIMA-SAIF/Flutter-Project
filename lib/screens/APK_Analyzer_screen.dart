@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class APKAnalyzerScreen extends StatelessWidget {
   const APKAnalyzerScreen({super.key});
 
@@ -16,6 +17,5 @@ class APKAnalyzerScreen extends StatelessWidget {
         ),
       ),
     );
-
   }
 }
