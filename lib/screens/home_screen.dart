@@ -50,6 +50,36 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          children: [
+            const SizedBox(height: 20),
+            Expanded(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 1,
+                  crossAxisSpacing: 15.0,
+                  mainAxisSpacing: 15.0,
+                  childAspectRatio: 2.5,
+                ),
+                itemCount: tools.length,
+                itemBuilder: (context, index) {
+                  return ToolCard(tool: tools[index]);
+                },
+              ),
+            ),
+            const SizedBox(height: 20),
+            Text(
+              'For educational and ethical purposes only.',
+              style: TextStyle(
+                color: Colors.white.withOpacity(0.5),
+                fontSize: 15,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
