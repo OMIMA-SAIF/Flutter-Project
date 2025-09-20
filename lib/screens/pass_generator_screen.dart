@@ -6,7 +6,10 @@ class PasswordGeneratorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(
+        title: const Text('Password Generator'),
+        backgroundColor: Colors.transparent,
+      ),
     );
   }
 
