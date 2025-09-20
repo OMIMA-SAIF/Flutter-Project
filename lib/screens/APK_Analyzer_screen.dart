@@ -5,7 +5,10 @@ class APKAnalyzerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(
+        title: const Text('HTTP Header Analyzer'),
+        backgroundColor: Colors.transparent,
+      ),
     );
 
   }
