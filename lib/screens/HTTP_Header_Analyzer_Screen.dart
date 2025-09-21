@@ -1,3 +1,4 @@
+// lib/screens/password_generator_screen.dart
 import 'package:flutter/material.dart';
 
 class HTTPHeaderAnalyzerScreen extends StatelessWidget {

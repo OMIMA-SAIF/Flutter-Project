@@ -1,13 +1,14 @@
+// lib/screens/password_generator_screen.dart
 import 'package:flutter/material.dart';
 
-class PasswordGeneratorScreen extends StatelessWidget {
-  const PasswordGeneratorScreen({super.key});
+class PortScannerScreen extends StatelessWidget {
+  const PortScannerScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Password Generator'),
+        title: const Text('Port Scanner'),
         backgroundColor: Colors.transparent,
       ),
       body: const Center(
