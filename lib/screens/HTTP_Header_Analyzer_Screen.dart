@@ -13,7 +13,7 @@ class HTTPHeaderAnalyzerScreen extends StatelessWidget {
       ),
       body: const Center(
         child: Text(
-          'This is the Password Generator page.',
+          'This is the HTTP Header Analyzer page.',
           style: TextStyle(color: Colors.white, fontSize: 18),
         ),
       ),
