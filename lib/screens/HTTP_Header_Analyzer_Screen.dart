@@ -50,6 +50,7 @@ import 'package:http/http.dart' as http;
   subtitle: Text(Uri.decodeComponent(value)),
   ),
   );
+
   },
   TextField(
   controller: _urlController,
@@ -70,6 +71,12 @@ import 'package:http/http.dart' as http;
   label: const Text('Head Analysis',style: TextStyle(fontSize: 16,color: Colors.white70),),
   ),
   ),
+  ),
+  if (_errorMessage != null)
+  Text(
+  _errorMessage!,
+  style: const TextStyle(color: Colors.red),
+  textAlign: TextAlign.center,
   ),
   Expanded(
   child: ListView.builder(
