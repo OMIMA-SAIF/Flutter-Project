@@ -36,6 +36,16 @@ class PortScannerScreen extends StatelessWidget {
   _isScanning = false;
   });
   }
+  for (int port = startPort; port <= endPort; port++) {
+  try {
+  final socket = await Socket.connect(ipAddress, port, timeout: const Duration(milliseconds: 200));
+  openPorts.add(port);
+  socket.destroy(); // Close the connection
+  } catch (e) {
+  // Port is likely closed
+  }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
