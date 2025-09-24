@@ -18,6 +18,7 @@ class PortScannerScreen extends StatelessWidget {
   String _scanResult = 'Enter an IP and a port range to start scanning.';
   bool _isScanning = false;
   final String ipAddress = _ipController.text;
+  final int startPort = int.tryParse(_startPortController.text) ?? 1;
 
   Future<void> _scanPorts() async {
   setState(() {
