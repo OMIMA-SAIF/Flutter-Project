@@ -8,6 +8,9 @@ class HTTPHeaderAnalyzerScreen extends StatelessWidget {
 
   @override
   State<HttpHeaderAnalyzerPage> createState() => _HttpHeaderAnalyzerPageState();
+  Map<String, String>? _headers;
+  bool _isLoading = false;
+  String? _errorMessage;
 
   Widget build(BuildContext context) {
     return Scaffold(
