@@ -61,6 +61,8 @@ class PortScannerScreen extends StatelessWidget {
   super.dispose();
   }
   ),
+  const SizedBox(height: 20),
+
   body: Padding(
   padding: const EdgeInsets.all(20.0),
   child: Column(
