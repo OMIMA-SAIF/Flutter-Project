@@ -7,6 +7,8 @@ class HTTPHeaderAnalyzerScreen extends StatelessWidget {
   const HTTPHeaderAnalyzerScreen({super.key});
 
   @override
+  State<HttpHeaderAnalyzerPage> createState() => _HttpHeaderAnalyzerPageState();
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
