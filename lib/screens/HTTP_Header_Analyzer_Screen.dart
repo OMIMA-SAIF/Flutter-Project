@@ -51,6 +51,15 @@ import 'package:http/http.dart' as http;
   ),
   );
   },
+  TextField(
+  controller: _urlController,
+  decoration: const InputDecoration(
+  labelText: 'Add Link',labelStyle: TextStyle(color: Colors.white70),
+  border: OutlineInputBorder(),
+  prefixIcon: Icon(Icons.link),
+  ),
+  keyboardType: TextInputType.url,
+  ),
   ),
   SizedBox(
   width: double.infinity,
