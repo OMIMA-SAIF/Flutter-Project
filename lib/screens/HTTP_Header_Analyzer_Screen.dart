@@ -70,6 +70,8 @@ import 'package:http/http.dart' as http;
   icon: const Icon(Icons.search),
   label: const Text('Head Analysis',style: TextStyle(fontSize: 16,color: Colors.white70),),
   ),
+  const SizedBox(height: 16),
+
   ),
   ),
   if (_errorMessage != null)
