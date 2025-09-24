@@ -45,6 +45,14 @@ class PortScannerScreen extends StatelessWidget {
   // Port is likely closed
   }
   }
+  if (ipAddress.isEmpty) {
+  setState(() {
+  _scanResult = 'Please enter a valid IP address or domain.';
+  _isScanning = false;
+  });
+  return;
+  }
+
 
   @override
   Widget build(BuildContext context) {
