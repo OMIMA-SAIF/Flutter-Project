@@ -27,6 +27,15 @@ class PortScannerScreen extends StatelessWidget {
   _scanResult = 'Scanning ports...';
   _isScanning = true;
   });
+  setState(() {
+  if (openPorts.isNotEmpty) {
+  _scanResult = 'Open ports found: ${openPorts.join(', ')}';
+  } else {
+  _scanResult = 'No open ports found in the specified range.';
+  }
+  _isScanning = false;
+  });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
