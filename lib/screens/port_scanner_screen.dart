@@ -45,6 +45,14 @@ class PortScannerScreen extends StatelessWidget {
   // Port is likely closed
   }
   }
+  TextField(
+  controller: _ipController,
+  decoration: const InputDecoration(
+  labelText: 'IP Address or Domain',
+  border: OutlineInputBorder(),
+  ),
+  keyboardType: TextInputType.url,
+  ),
   @override
   void dispose() {
   _ipController.dispose();
