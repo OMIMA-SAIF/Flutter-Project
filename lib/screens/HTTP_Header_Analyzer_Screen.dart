@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-class HTTPHeaderAnalyzerScreen extends StatelessWidget {
+  class HTTPHeaderAnalyzerScreen extends StatelessWidget {
   const HTTPHeaderAnalyzerScreen({super.key});
 
   @override
@@ -17,6 +17,13 @@ class HTTPHeaderAnalyzerScreen extends StatelessWidget {
   _isLoading = false;
   });
   return;
+  }
+  try {
+  final response = await http.get(Uri.parse(url));
+  setState(() {
+  _headers = response.headers;
+  _isLoading = false;
+  });
   }
   Widget build(BuildContext context) {
     return Scaffold(
