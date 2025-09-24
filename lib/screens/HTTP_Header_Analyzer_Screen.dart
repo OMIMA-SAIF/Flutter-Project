@@ -1,5 +1,6 @@
 // lib/screens/password_generator_screen.dart
 import 'package:flutter/material.dart';
+import 'dart:convert';
 
 class HTTPHeaderAnalyzerScreen extends StatelessWidget {
   const HTTPHeaderAnalyzerScreen({super.key});
