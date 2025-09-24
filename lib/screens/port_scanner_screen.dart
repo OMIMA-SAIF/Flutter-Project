@@ -60,7 +60,12 @@ class PortScannerScreen extends StatelessWidget {
   _endPortController.dispose();
   super.dispose();
   }
-
+  ),
+  body: Padding(
+  padding: const EdgeInsets.all(20.0),
+  child: Column(
+  crossAxisAlignment: CrossAxisAlignment.stretch,
+  children: [
   if (ipAddress.isEmpty) {
   setState(() {
   _scanResult = 'Please enter a valid IP address or domain.';
