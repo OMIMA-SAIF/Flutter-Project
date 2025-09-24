@@ -25,6 +25,12 @@ import 'package:http/http.dart' as http;
   _isLoading = false;
   });
   }
+  catch (e) {
+  setState(() {
+  _errorMessage = 'An error occurred , please make sure the link is correct and yor are connected to Internet';
+  _isLoading = false;
+  });
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
