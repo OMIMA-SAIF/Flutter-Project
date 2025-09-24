@@ -31,6 +31,28 @@ import 'package:http/http.dart' as http;
   _isLoading = false;
   });
   }
+  if (_headers != null && _headers!.isNotEmpty)
+  Expanded(
+  child: ListView.builder(
+  itemCount: _headers!.length,
+  itemBuilder: (context, index) {
+  String key = _headers!.keys.elementAt(index);
+  String value = _headers![key]!;
+  return Card(
+  child: ListTile(
+  title: Text(
+  key,
+  style: const TextStyle(
+  fontWeight: FontWeight.bold,
+  color: Colors.blue,
+  ),
+  ),
+  subtitle: Text(Uri.decodeComponent(value)),
+  ),
+  );
+  },
+  ),
+  ),
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
