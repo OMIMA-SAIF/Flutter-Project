@@ -52,6 +52,15 @@ import 'package:http/http.dart' as http;
   );
   },
   ),
+  SizedBox(
+  width: double.infinity,
+  child: ElevatedButton.icon(
+  onPressed: _isLoading ? null : _analyzeHeaders,
+  style: ElevatedButton.styleFrom(backgroundColor: Colors.blue[400],shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+  icon: const Icon(Icons.search),
+  label: const Text('Head Analysis',style: TextStyle(fontSize: 16,color: Colors.white70),),
+  ),
+  ),
   ),
   Expanded(
   child: ListView.builder(
