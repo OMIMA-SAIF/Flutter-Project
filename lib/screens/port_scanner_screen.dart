@@ -11,6 +11,10 @@ class PortScannerScreen extends StatelessWidget {
   @override
   State<PortScannerScreen> createState() => _PortScannerScreenState();
   }
+  class _PortScannerScreenState extends State<PortScannerScreen> {
+  final TextEditingController _ipController = TextEditingController();
+  final TextEditingController _startPortController = TextEditingController(text: '1');
+  final TextEditingController _endPortController = TextEditingController(text: '1024');
 
   @override
   Widget build(BuildContext context) {
