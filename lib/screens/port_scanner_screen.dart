@@ -5,6 +5,13 @@ import 'dart:io';
 class PortScannerScreen extends StatelessWidget {
   const PortScannerScreen({super.key});
 
+  class PortScannerScreen extends StatefulWidget {
+  const PortScannerScreen({super.key});
+
+  @override
+  State<PortScannerScreen> createState() => _PortScannerScreenState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
