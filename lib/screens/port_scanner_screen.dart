@@ -75,6 +75,14 @@ class PortScannerScreen extends StatelessWidget {
   });
   return;
   }
+  ElevatedButton(
+  onPressed: _isScanning ? null : _scanPorts,
+  style: ElevatedButton.styleFrom(
+  backgroundColor: Colors.blue[400],
+  padding: const EdgeInsets.symmetric(vertical: 15),
+  ),
+  child: const Text('Scan Ports'),
+  ),
   Expanded(
   child: TextField(
   controller: _endPortController,
