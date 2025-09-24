@@ -15,6 +15,8 @@ class PortScannerScreen extends StatelessWidget {
   final TextEditingController _ipController = TextEditingController();
   final TextEditingController _startPortController = TextEditingController(text: '1');
   final TextEditingController _endPortController = TextEditingController(text: '1024');
+  String _scanResult = 'Enter an IP and a port range to start scanning.';
+  bool _isScanning = false;
 
   @override
   Widget build(BuildContext context) {
