@@ -73,7 +73,16 @@ class PortScannerScreen extends StatelessWidget {
   });
   return;
   }
-
+  Expanded(
+  child: TextField(
+  controller: _endPortController,
+  decoration: const InputDecoration(
+  labelText: 'End Port',labelStyle: TextStyle(fontSize: 20),
+  border: OutlineInputBorder(),
+  ),
+  keyboardType: TextInputType.number,
+  ),
+  ),
 
   @override
   Widget build(BuildContext context) {
