@@ -18,6 +18,11 @@ class PortScannerScreen extends StatelessWidget {
   String _scanResult = 'Enter an IP and a port range to start scanning.';
   bool _isScanning = false;
 
+  Future<void> _scanPorts() async {
+  setState(() {
+  _scanResult = 'Scanning ports...';
+  _isScanning = true;
+  });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
