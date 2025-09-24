@@ -53,6 +53,21 @@ import 'package:http/http.dart' as http;
   },
   ),
   ),
+  Expanded(
+  child: ListView.builder(
+  itemCount: _headers!.length,
+  itemBuilder: (context, index) {
+  String key = _headers!.keys.elementAt(index);
+  String value = _headers![key]!;
+  return Card(
+  child: ListTile(
+  title: Text(
+  key,
+  style: const TextStyle(
+  fontWeight: FontWeight.bold,
+  color: Colors.blue,
+  ),
+  ),
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
