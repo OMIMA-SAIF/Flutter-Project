@@ -11,7 +11,13 @@ class HTTPHeaderAnalyzerScreen extends StatelessWidget {
   Map<String, String>? _headers;
   bool _isLoading = false;
   String? _errorMessage;
-
+  if (url.isEmpty) {
+  setState(() {
+  _errorMessage = 'Please Enter a Valid link';
+  _isLoading = false;
+  });
+  return;
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
