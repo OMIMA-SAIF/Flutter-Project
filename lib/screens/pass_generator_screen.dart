@@ -131,6 +131,25 @@ class PasswordGeneratorScreen extends StatelessWidget {
   }
 
 
+  Widget _buildCheckbox(String title, bool value, Function(bool?) onChanged) {
+    return Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: CheckboxListTile(title: Text(title, style: const TextStyle(color: Colors.grey,fontSize: 20)),
+        value: value,
+        onChanged: (bool? newValue) {
+          setState(() {
+            onChanged(newValue);
+          });
+          _generatePassword();
+        },
+        activeColor: Colors.blue,
+        controlAffinity: ListTileControlAffinity.leading,
+      ),
+    );
+  }
+}
+
+
 
       
 
