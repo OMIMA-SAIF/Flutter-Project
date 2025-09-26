@@ -84,3 +84,18 @@ class PasswordGeneratorScreen extends StatelessWidget {
             ),
             const SizedBox(height: 30),
 
+             Slider(
+              value: _passwordLength,
+              min: 8,
+              max: 20,
+              divisions: 12,
+              onChanged: (newValue) {
+                setState(() {
+                  _passwordLength = newValue;
+                });
+                _generatePassword();
+              },
+              activeColor: Colors.blue,
+            ),
+
+
