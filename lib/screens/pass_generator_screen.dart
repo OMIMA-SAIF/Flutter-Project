@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math'; // لإضافة مكتبة الأرقام العشوائية
 
 class PasswordGeneratorScreen extends StatelessWidget {
   const PasswordGeneratorScreen({super.key});
