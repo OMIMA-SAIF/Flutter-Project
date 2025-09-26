@@ -7,10 +7,13 @@ class PasswordGeneratorScreen extends StatelessWidget {
   @override
   State<PasswordGeneratorScreen> createState() => _PasswordGeneratorScreenState();
 }
-      body: const Center(
-        child: Text(
-          'This is the Password Generator page.',
-          style: TextStyle(color: Colors.white, fontSize: 18),
-        ),
-      ),
+
+
+ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
+  String _generatedPassword = '';
+  double _passwordLength = 12;
+  bool _includeUppercase = true;
+  bool _includeLowercase = true;
+  bool _includeNumbers = true;
+  bool _includeSymbols = false;
     
