@@ -26,3 +26,9 @@ class PasswordGeneratorScreen extends StatelessWidget {
       if (_includeLowercase) charSet += 'abcdefghijklmnopqrstuvwxyz';
       if (_includeNumbers) charSet += '0123456789';
       if (_includeSymbols) charSet += '!@#\$%^&*()_+{}[]:;<>,.?/~';
+
+
+    if (charSet.isEmpty) {
+          _generatedPassword = 'Select at least one option.';
+          return;
+        }
