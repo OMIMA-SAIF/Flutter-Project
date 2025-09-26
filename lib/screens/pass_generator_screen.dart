@@ -32,3 +32,12 @@ class PasswordGeneratorScreen extends StatelessWidget {
           _generatedPassword = 'Select at least one option.';
           return;
         }
+
+        String tempPassword = '';
+      Random random = Random();
+      for (int i = 0; i < _passwordLength.round(); i++) {
+        tempPassword += charSet[random.nextInt(charSet.length)];
+      }
+      _generatedPassword = tempPassword;
+    });
+  }
