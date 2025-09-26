@@ -1,4 +1,6 @@
 // lib/screens/password_generator_screen.dart
+import 'package:flutter/material.dart';
+import 'dart:math'; // لإضافة مكتبة الأرقام العشوائية
 
 import 'package:flutter/material.dart';
 import 'dart:math'; // لإضافة مكتبة الأرقام العشوائية
@@ -11,6 +13,8 @@ class PasswordGeneratorScreen extends StatefulWidget {
 }
 
 class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
+
+ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
   String _generatedPassword = '';
   double _passwordLength = 12;
   bool _includeUppercase = true;
@@ -18,7 +22,7 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
   bool _includeNumbers = true;
   bool _includeSymbols = false;
 
-  void _generatePassword() {
+   void _generatePassword() {
     setState(() {
       String charSet = '';
       if (_includeUppercase) charSet += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -32,6 +36,13 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
       }
 
       String tempPassword = '';
+
+    if (charSet.isEmpty) {
+          _generatedPassword = 'Select at least one option.';
+          return;
+        }
+
+        String tempPassword = '';
       Random random = Random();
       for (int i = 0; i < _passwordLength.round(); i++) {
         tempPassword += charSet[random.nextInt(charSet.length)];
@@ -40,11 +51,6 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
     });
   }
 
-  @override
-  void initState() {
-    super.initState();
-    _generatePassword();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,12 +59,11 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
         title: const Text('Password Generator'),
         backgroundColor: Colors.transparent,
       ),
-      body: Padding(
+       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // حقل عرض كلمة المرور
             Container(
               padding: const EdgeInsets.all(20.0),
               decoration: BoxDecoration(
@@ -71,6 +76,7 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
                 textAlign: TextAlign.center,
               ),
             ),
+            
             const SizedBox(height: 40),
             // شريط طول كلمة المرور
             Text(
@@ -79,7 +85,7 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
             ),
             const SizedBox(height: 30),
 
-            Slider(
+
               value: _passwordLength,
               min: 8,
               max: 20,
@@ -92,6 +98,10 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
               },
               activeColor: Colors.greenAccent,
             ),
+              activeColor: Colors.blue,
+            ),
+
+            
             const SizedBox(height: 10),
             // صناديق التحديد
             _buildCheckbox('Include Uppercase Letters', _includeUppercase, (bool? value) {
@@ -106,12 +116,13 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
             _buildCheckbox('Include Symbols', _includeSymbols, (bool? value) {
               _includeSymbols = value!;
             }),
+            
             const SizedBox(height: 20),
-            // زر التوليد
             ElevatedButton(
               onPressed: _generatePassword,
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.greenAccent[400],
+                backgroundColor: Colors.blue[400],
                 padding: const EdgeInsets.symmetric(vertical: 15),
               ),
               child: const Text('Generate Password',style: TextStyle(fontSize: 20)),
@@ -121,6 +132,7 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
       ),
     );
   }
+
 
   Widget _buildCheckbox(String title, bool value, Function(bool?) onChanged) {
     return Padding(
@@ -139,3 +151,14 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
     );
   }
 }
+}
+
+
+
+//end of this page
+
+
+
+      
+
+
