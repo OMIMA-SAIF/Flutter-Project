@@ -17,3 +17,12 @@ class PasswordGeneratorScreen extends StatelessWidget {
   bool _includeNumbers = true;
   bool _includeSymbols = false;
     
+
+
+   void _generatePassword() {
+    setState(() {
+      String charSet = '';
+      if (_includeUppercase) charSet += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      if (_includeLowercase) charSet += 'abcdefghijklmnopqrstuvwxyz';
+      if (_includeNumbers) charSet += '0123456789';
+      if (_includeSymbols) charSet += '!@#\$%^&*()_+{}[]:;<>,.?/~';
