@@ -75,3 +75,12 @@ class PasswordGeneratorScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
+            
+            const SizedBox(height: 40),
+            // شريط طول كلمة المرور
+            Text(
+              'Password Length: ${_passwordLength.round()}',
+              style: const TextStyle(color: Colors.grey, fontSize: 19),
+            ),
+            const SizedBox(height: 30),
+
