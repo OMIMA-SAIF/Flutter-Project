@@ -113,5 +113,25 @@ class PasswordGeneratorScreen extends StatelessWidget {
             _buildCheckbox('Include Symbols', _includeSymbols, (bool? value) {
               _includeSymbols = value!;
             }),
+            
+            const SizedBox(height: 20),
+            // زر التوليد
+            ElevatedButton(
+              onPressed: _generatePassword,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue[400],
+                padding: const EdgeInsets.symmetric(vertical: 15),
+              ),
+              child: const Text('Generate Password',style: TextStyle(fontSize: 20)),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+
+
+      
 
 
