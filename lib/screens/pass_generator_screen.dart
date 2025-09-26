@@ -57,3 +57,21 @@ class PasswordGeneratorScreen extends StatelessWidget {
         title: const Text('Password Generator'),
         backgroundColor: Colors.transparent,
       ),
+       body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // حقل عرض كلمة المرور
+            Container(
+              padding: const EdgeInsets.all(20.0),
+              decoration: BoxDecoration(
+                color: Colors.grey[850],
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Text(
+                _generatedPassword,
+                style: const TextStyle(fontSize: 25, color: Colors.grey),
+                textAlign: TextAlign.center,
+              ),
+            ),
