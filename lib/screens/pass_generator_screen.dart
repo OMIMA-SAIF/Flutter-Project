@@ -41,3 +41,10 @@ class PasswordGeneratorScreen extends StatelessWidget {
       _generatedPassword = tempPassword;
     });
   }
+
+
+    @override
+  void initState() {
+    super.initState();
+    _generatePassword();
+  }
