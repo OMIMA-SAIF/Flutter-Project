@@ -98,4 +98,20 @@ class PasswordGeneratorScreen extends StatelessWidget {
               activeColor: Colors.blue,
             ),
 
+            
+            const SizedBox(height: 10),
+            // صناديق التحديد
+            _buildCheckbox('Include Uppercase Letters', _includeUppercase, (bool? value) {
+              _includeUppercase = value!;
+            }),
+            _buildCheckbox('Include Lowercase Letters', _includeLowercase, (bool? value) {
+              _includeLowercase = value!;
+            }),
+            _buildCheckbox('Include Numbers', _includeNumbers, (bool? value) {
+              _includeNumbers = value!;
+            }),
+            _buildCheckbox('Include Symbols', _includeSymbols, (bool? value) {
+              _includeSymbols = value!;
+            }),
+
 
