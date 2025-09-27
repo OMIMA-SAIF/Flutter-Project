@@ -57,3 +57,15 @@ class _HttpHeaderAnalyzerPageState extends State<HttpHeaderAnalyzerPage> {
       appBar: AppBar(
         title: const Text('HTTP Header Analyzer'),
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(
+              controller: _urlController,
+              decoration: const InputDecoration(
+                labelText: 'Add Link',labelStyle: TextStyle(color: Colors.white70),
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.link),
+              ),
+              keyboardType: TextInputType.url,
