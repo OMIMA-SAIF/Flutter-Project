@@ -16,3 +16,9 @@ class _PortScannerScreenState extends State<PortScannerScreen> {
 
 String _scanResult = 'Enter an IP and a port range to start scanning.';
   bool _isScanning = false;
+
+  Future<void> _scanPorts() async {
+    setState(() {
+      _scanResult = 'Scanning ports...';
+      _isScanning = true;
+    });
