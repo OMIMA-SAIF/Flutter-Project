@@ -22,3 +22,10 @@ String _scanResult = 'Enter an IP and a port range to start scanning.';
       _scanResult = 'Scanning ports...';
       _isScanning = true;
     });
+
+
+
+    final String ipAddress = _ipController.text;
+    final int startPort = int.tryParse(_startPortController.text) ?? 1;
+    final int endPort = int.tryParse(_endPortController.text) ?? 1024;
+    final List<int> openPorts = [];
