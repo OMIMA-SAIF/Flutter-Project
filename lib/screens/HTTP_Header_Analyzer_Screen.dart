@@ -9,3 +9,10 @@ class HTTPHeaderAnalyzerScreen extends StatelessWidget {
   @override
   State<HttpHeaderAnalyzerPage> createState() => _HttpHeaderAnalyzerPageState();
 }
+
+
+class _HttpHeaderAnalyzerPageState extends State<HttpHeaderAnalyzerPage> {
+  final TextEditingController _urlController = TextEditingController();
+  Map<String, String>? _headers;
+  bool _isLoading = false;
+  String? _errorMessage;
