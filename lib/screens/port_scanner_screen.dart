@@ -93,3 +93,31 @@ String _scanResult = 'Enter an IP and a port range to start scanning.';
             ),
             keyboardType: TextInputType.url,
           ),
+           const SizedBox(height: 30),
+          // Port Range Input Fields
+          Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  controller: _startPortController,
+                  decoration: const InputDecoration(
+                    labelText: 'Start Port',labelStyle: TextStyle(fontSize: 20),
+                    border: OutlineInputBorder(),
+                  ),
+                  keyboardType: TextInputType.number,
+                ),
+              ),
+              const SizedBox(width: 20),
+              Expanded(
+                child: TextField(
+                  controller: _endPortController,
+                  decoration: const InputDecoration(
+                    labelText: 'End Port',labelStyle: TextStyle(fontSize: 20),
+                    border: OutlineInputBorder(),
+                  ),
+                  keyboardType: TextInputType.number,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
