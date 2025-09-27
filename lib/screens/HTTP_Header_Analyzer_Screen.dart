@@ -50,3 +50,10 @@ class _HttpHeaderAnalyzerPageState extends State<HttpHeaderAnalyzerPage> {
       });
     }
   }
+
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('HTTP Header Analyzer'),
+      ),
