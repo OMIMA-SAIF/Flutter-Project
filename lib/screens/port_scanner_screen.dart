@@ -51,3 +51,14 @@ String _scanResult = 'Enter an IP and a port range to start scanning.';
         // Port is likely closed
       }
     }
+
+
+       setState(() {
+      if (openPorts.isNotEmpty) {
+        _scanResult = 'Open ports found: ${openPorts.join(', ')}';
+      } else {
+        _scanResult = 'No open ports found in the specified range.';
+      }
+      _isScanning = false;
+    });
+  }
