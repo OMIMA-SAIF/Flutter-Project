@@ -121,3 +121,18 @@ String _scanResult = 'Enter an IP and a port range to start scanning.';
             ],
           ),
           const SizedBox(height: 20),
+            // Scan Button
+          ElevatedButton(
+            onPressed: _isScanning ? null : _scanPorts,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue[400],
+              padding: const EdgeInsets.symmetric(vertical: 15),
+            ),
+            child: const Text('Scan Ports'),
+          ),
+          const SizedBox(height: 20),// Loading Indicator
+              if (_isScanning)
+                const Center(child: CircularProgressIndicator(color: Colors.blue)),
+              const SizedBox(height: 20),
+
+          
