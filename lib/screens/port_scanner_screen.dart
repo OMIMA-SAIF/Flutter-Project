@@ -79,3 +79,17 @@ String _scanResult = 'Enter an IP and a port range to start scanning.';
           title: const Text('Port Scanner',style: TextStyle(fontSize: 20),),
           backgroundColor: Colors.transparent,
         ),
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+            // IP Input Field
+            TextField(
+            controller: _ipController,
+            decoration: const InputDecoration(
+              labelText: 'IP Address or Domain',
+              border: OutlineInputBorder(),
+            ),
+            keyboardType: TextInputType.url,
+          ),
