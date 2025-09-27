@@ -134,5 +134,20 @@ String _scanResult = 'Enter an IP and a port range to start scanning.';
               if (_isScanning)
                 const Center(child: CircularProgressIndicator(color: Colors.blue)),
               const SizedBox(height: 20),
+               // Scan Results Display
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Text(
+                    _scanResult,
+                    style: const TextStyle(color: Colors.grey, fontSize: 16),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+    );
+  }
+}
 
           
