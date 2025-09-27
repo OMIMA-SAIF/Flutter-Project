@@ -71,3 +71,11 @@ String _scanResult = 'Enter an IP and a port range to start scanning.';
     _endPortController.dispose();
     super.dispose();
   }
+
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Port Scanner',style: TextStyle(fontSize: 20),),
+          backgroundColor: Colors.transparent,
+        ),
