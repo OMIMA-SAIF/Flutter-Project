@@ -25,3 +25,13 @@ class _HttpHeaderAnalyzerPageState extends State<HttpHeaderAnalyzerPage> {
       _errorMessage = null;
       _headers = null;
     });
+
+
+
+    if (url.isEmpty) {
+      setState(() {
+        _errorMessage = 'Please Enter a Valid link';
+        _isLoading = false;
+      });
+      return;
+    }
