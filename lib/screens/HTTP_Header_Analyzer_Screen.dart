@@ -16,3 +16,12 @@ class _HttpHeaderAnalyzerPageState extends State<HttpHeaderAnalyzerPage> {
   Map<String, String>? _headers;
   bool _isLoading = false;
   String? _errorMessage;
+
+
+   Future<void> _analyzeHeaders() async {
+    final String url = _urlController.text.trim();
+    setState(() {
+      _isLoading = true;
+      _errorMessage = null;
+      _headers = null;
+    });
