@@ -39,3 +39,15 @@ String _scanResult = 'Enter an IP and a port range to start scanning.';
       });
       return;
     }
+
+
+
+     for (int port = startPort; port <= endPort; port++) {
+      try {
+        final socket = await Socket.connect(ipAddress, port, timeout: const Duration(milliseconds: 200));
+        openPorts.add(port);
+        socket.destroy(); // Close the connection
+      } catch (e) {
+        // Port is likely closed
+      }
+    }
