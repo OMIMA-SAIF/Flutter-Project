@@ -29,3 +29,13 @@ String _scanResult = 'Enter an IP and a port range to start scanning.';
     final int startPort = int.tryParse(_startPortController.text) ?? 1;
     final int endPort = int.tryParse(_endPortController.text) ?? 1024;
     final List<int> openPorts = [];
+
+
+     // Check if IP is valid
+    if (ipAddress.isEmpty) {
+      setState(() {
+        _scanResult = 'Please enter a valid IP address or domain.';
+        _isScanning = false;
+      });
+      return;
+    }
