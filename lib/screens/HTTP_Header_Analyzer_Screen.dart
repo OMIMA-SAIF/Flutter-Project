@@ -80,3 +80,42 @@ class _HttpHeaderAnalyzerPageState extends State<HttpHeaderAnalyzerPage> {
                 label: const Text('Head Analysis',style: TextStyle(fontSize: 16,color: Colors.white70),),
               ),
             ),
+            const SizedBox(height: 16),
+            if (_isLoading)
+              const CircularProgressIndicator(),
+            if (_errorMessage != null)
+              Text(
+                _errorMessage!,
+                style: const TextStyle(color: Colors.red),
+                textAlign: TextAlign.center,
+              ),
+            if (_headers != null && _headers!.isNotEmpty)
+              Expanded(
+                child: ListView.builder(
+                  itemCount: _headers!.length,
+                  itemBuilder: (context, index) {
+                    String key = _headers!.keys.elementAt(index);
+                    String value = _headers![key]!;
+                    return Card(
+                      child: ListTile(
+                        title: Text(
+                          key,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                          ),
+                        ),
+                        subtitle: Text(Uri.decodeComponent(value)),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            if (_headers != null && _headers!.isEmpty)
+              const Text('HTTP Header not founf'),
+          ],
+        ),
+      ),
+    );
+  }
+}
