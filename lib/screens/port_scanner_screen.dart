@@ -62,3 +62,12 @@ String _scanResult = 'Enter an IP and a port range to start scanning.';
       _isScanning = false;
     });
   }
+
+
+    @override
+  void dispose() {
+    _ipController.dispose();
+    _startPortController.dispose();
+    _endPortController.dispose();
+    super.dispose();
+  }
