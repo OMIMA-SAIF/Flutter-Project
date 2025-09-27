@@ -35,3 +35,18 @@ class _HttpHeaderAnalyzerPageState extends State<HttpHeaderAnalyzerPage> {
       });
       return;
     }
+
+
+     try {
+      final response = await http.get(Uri.parse(url));
+      setState(() {
+        _headers = response.headers;
+        _isLoading = false;
+      });
+    } catch (e) {
+      setState(() {
+        _errorMessage = 'An error occurred , please make sure the link is correct and yor are connected to Internet';
+        _isLoading = false;
+      });
+    }
+  }
